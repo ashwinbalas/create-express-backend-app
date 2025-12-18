@@ -24,13 +24,23 @@ program
 program.parse(process.argv);
 
 function createProject(projectName) {
-  const targetPath = path.join(process.cwd(), projectName);
+  const currentDir = process.cwd();
+  const isCurrentDir = projectName === ".";
+  const targetPath = isCurrentDir
+    ? currentDir
+    : path.join(currentDir, projectName);
   const templatePath = path.join(__dirname, "../template");
 
   // 1️⃣ Check if folder already exists
-  if (fs.existsSync(targetPath)) {
+  if (!isCurrentDir && fs.existsSync(targetPath)) {
     console.log(chalk.red(`❌ Folder "${projectName}" already exists`));
     process.exit(1);
+  }
+
+  if (isCurrentDir) {
+    console.log(
+      chalk.yellow("⚠️  Creating project in the current directory...")
+    );
   }
 
   // 2️⃣ Copy template
@@ -41,7 +51,7 @@ function createProject(projectName) {
   const pkgPath = path.join(targetPath, "package.json");
   if (fs.existsSync(pkgPath)) {
     const pkg = fs.readJsonSync(pkgPath);
-    pkg.name = projectName;
+    pkg.name = isCurrentDir ? path.basename(targetPath) : projectName;
     fs.writeJsonSync(pkgPath, pkg, { spaces: 2 });
   }
 
@@ -55,6 +65,8 @@ function createProject(projectName) {
   // 5️⃣ Done 🎉
   console.log(chalk.green("\n✅ Project created successfully!"));
   console.log(chalk.cyan(`\nNext steps:`));
-  console.log(`  cd ${projectName}`);
+  if (!isCurrentDir) {
+    console.log(`  cd ${projectName}`);
+  }
   console.log(`  npm run dev`);
 }
