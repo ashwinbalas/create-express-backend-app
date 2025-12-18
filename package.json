@@ -15,7 +15,9 @@
     "backend",
     "boilerplate",
     "cli",
-    "mongodb"
+    "mongodb",
+    "create-express-backend-app",
+    "Ashwin balas"
   ],
   "author": "Ashwin Balas",
   "license": "ISC",
