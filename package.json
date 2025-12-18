@@ -1,6 +1,6 @@
 {
   "name": "create-express-backend-app",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Express backend boilerplate CLI",
   "bin": {
     "create-express-backend-app": "bin/index.js"
