@@ -49,19 +49,26 @@ create-express-backend-app my-new-app
     npx create-express-backend-app my-awesome-backend
     ```
 
-3.  The CLI will:
+3.  **Interactive Setup**:
+    The CLI will ask you a few questions to customize your project:
+
+    - **Language**: Choose between **TypeScript** (recommended) or **JavaScript**.
+    - **Database Name**: Enter the name for your MongoDB database (default is `express_app`).
+    - **Port**: Specify the port number for the server to run on (default is 8080).
+
+4.  The CLI will then:
 
     - Create a new directory named `my-awesome-backend`.
     - Clone the boilerplate structure.
     - Install all necessary dependencies (`express`, `mongoose`, `dotenv`, etc.).
 
-4.  Navigate into your project:
+5.  Navigate into your project:
 
     ```bash
     cd my-awesome-backend
     ```
 
-5.  Start the development server:
+6.  Start the development server:
 
     ```bash
     npm run dev
