@@ -40,7 +40,7 @@ Follow these steps to set up and run the project locally.
     ```bash
     npm run dev
     ```
-    The server will start on `http://localhost:3000` (or your defined PORT).
+    The server will start on `http://localhost:8080` (or your defined PORT).
 
 ## 📂 Project Structure
 
