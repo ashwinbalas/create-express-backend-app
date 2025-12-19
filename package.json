@@ -1,7 +1,7 @@
 {
   "name": "create-express-backend-app",
   "version": "1.0.5",
-  "description": "Express backend boilerplate CLI",
+  "description": "CLI tool to generate a production-ready Express.js backend with MongoDB",
   "bin": {
     "create-express-backend-app": "bin/index.js"
   },
@@ -11,15 +11,31 @@
   ],
   "keywords": [
     "express",
+    "expressjs",
     "node",
+    "nodejs",
     "backend",
-    "boilerplate",
+    "api",
+    "rest-api",
     "cli",
+    "scaffold",
+    "generator",
+    "boilerplate",
+    "express-generator",
     "mongodb",
-    "create-express-backend-app",
-    "Ashwin balas"
+    "npx",
+    "create-app",
+    "create-express-backend-app"
   ],
   "author": "Ashwin Balas",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ashwinbalas/create-express-backend-app"
+  },
+  "homepage": "https://github.com/ashwinbalas/create-express-backend-app#readme",
+  "bugs": {
+    "url": "https://github.com/ashwinbalas/create-express-backend-app/issues"
+  },
   "license": "ISC",
   "type": "module",
   "dependencies": {
